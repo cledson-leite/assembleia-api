@@ -31,4 +31,13 @@ export class PautasService {
       failure: null,
     };
   }
+
+  async list(): Promise<Result> {
+    const result = await this.repository.find();
+
+    return {
+      success: result,
+      failure: null,
+    };
+  }
 }
